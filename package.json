@@ -1,0 +1,16 @@
+{
+  "name": "angbad",
+  "version": "0.1.0",
+  "description": "A micro library to facilitate Thin-Controller Angular 1.x code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "services",
+    "data"
+  ],
+  "author": "Mark Manley",
+  "license": "MIT"
+}
