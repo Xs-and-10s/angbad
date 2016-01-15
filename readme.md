@@ -21,7 +21,7 @@ i.e. WE DON'T HAVE TO DO IT LIKE THIS.
 
 Using the techniques this micro library employs, pretty much all we have to do
 in our controllers is say something along the lines of:
-```
+```js
 var vm = this;
 vm.dataToBePaired = aService.dataToBePaired
 ```
