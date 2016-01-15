@@ -2,11 +2,11 @@ module.exports = function () {
 
     return function (fragileArrayReference) {
         var chain = {
-            emptyContents: function () {
+            empty: function () {
                 emptyContentsOf(chain.reference);
                 return chain;
             },
-            replaceContentsWith: function (newContents) {
+            swap: function (newContents) {
                 replaceContentsOf(chain.reference, newContents);
                 return chain;
             },
