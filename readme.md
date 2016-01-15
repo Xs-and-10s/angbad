@@ -21,8 +21,10 @@ i.e. WE DON'T HAVE TO DO IT LIKE THIS.
 
 Using the techniques this micro library employs, pretty much all we have to do
 in our controllers is say something along the lines of:
-  `var vm = this;
-   vm.dataToBePaired = aService.dataToBePaired`
+```
+var vm = this;
+vm.dataToBePaired = aService.dataToBePaired
+```
 
 
 \*Angbad was the fortress of Morgoth and his forces of darkness.
