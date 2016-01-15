@@ -23,7 +23,7 @@ module.exports = function () {
         fragileArrayReference.length = 0;
     }
     function replaceContentsOf (fragileArrayReference, newContents) {
-        emptyContentsOf(fragileArrayReference);
+        fragileArrayReference.length = 0;
         fragileArrayReference.push.apply(fragileArrayReference, newContents);
     }
     function appendTo (fragileArrayReference, moreContents) {
