@@ -1,18 +1,5 @@
 module.exports = function () {
 
-    function emptyContentsOf (fragileArrayReference) {
-        fragileArrayReference.length = 0;
-    }
-
-    function replaceContentsOf (fragileArrayReference, newContents) {
-        emptyContentsOf(fragileArrayReference);
-        fragileArrayReference.push.apply(fragileArrayReference, newContents);
-    }
-
-    function appendTo (fragileArrayReference, moreContents) {
-        fragileArrayReference.push.apply(fragileArrayReference, moreContents);
-    }
-
     return function (fragileArrayReference) {
         var chain = {
             emptyContents: function () {
@@ -30,5 +17,16 @@ module.exports = function () {
         };
         chain.reference = fragileArrayReference;
         return chain;
+    }
+
+    function emptyContentsOf (fragileArrayReference) {
+        fragileArrayReference.length = 0;
+    }
+    function replaceContentsOf (fragileArrayReference, newContents) {
+        emptyContentsOf(fragileArrayReference);
+        fragileArrayReference.push.apply(fragileArrayReference, newContents);
+    }
+    function appendTo (fragileArrayReference, moreContents) {
+        fragileArrayReference.push.apply(fragileArrayReference, moreContents);
     }
 }
