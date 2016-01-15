@@ -1,6 +1,6 @@
 module.exports = function () {
 
-    return function (fragileArrayReference) {
+    return function (referenceToMutableArray) {
         var chain = {
             empty: function () {
                 emptyContentsOf(chain.reference);
@@ -15,18 +15,18 @@ module.exports = function () {
                 return chain;
             }
         };
-        chain.reference = fragileArrayReference;
+        chain.reference = referenceToMutableArray;
         return chain;
     }
 
-    function emptyContentsOf (fragileArrayReference) {
-        fragileArrayReference.length = 0;
+    function emptyContentsOf (referenceToMutableArray) {
+        referenceToMutableArray.length = 0;
     }
-    function replaceContentsOf (fragileArrayReference, newContents) {
-        fragileArrayReference.length = 0;
-        fragileArrayReference.push.apply(fragileArrayReference, newContents);
+    function replaceContentsOf (referenceToMutableArray, newContents) {
+        referenceToMutableArray.length = 0;
+        referenceToMutableArray.push.apply(referenceToMutableArray, newContents);
     }
-    function appendTo (fragileArrayReference, moreContents) {
-        fragileArrayReference.push.apply(fragileArrayReference, moreContents);
+    function appendTo (referenceToMutableArray, moreContents) {
+        referenceToMutableArray.push.apply(referenceToMutableArray, moreContents);
     }
 }
