@@ -1,9 +1,13 @@
-Angbad
+# Angbad
 
 A micro library to help you put your code in your Services, not your Controllers.
+---
 
   It is said that global, mutable state is the root of all evil. If that is so,
 then Angbad is a place where we can contain the forces of evil.
+
+  *\*Angbad was the fortress of Morgoth and his forces of darkness.*
+---
 
   Basing our angular apps off of mutable models shared through dependency injection
 poses a challenge.  When updating our models through network requests, etc.,
@@ -26,11 +30,8 @@ var vm = this;
 vm.dataToBePaired = aService.dataToBePaired
 ```
 
+---
 
-\*Angbad was the fortress of Morgoth and his forces of darkness.
+ ### API will harden over the next few days.
 
- *Not Ready Yet.*
- ---
- Used in production, but i want to make sure
- the API is tweaked/polished before releasing it
- into the wild.
+ *Used in production, but i want to make sure the API is tweaked/polished before releasing it into the wild.*
